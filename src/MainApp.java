@@ -7,7 +7,12 @@ public class MainApp {
 		// System.out.println("Hello");
 		// ArrayList();
 		// ArrayListModivy();
-		ArrayToArrayList();
+		// ArrayToArrayList();
+		// ArrayListCustomObject();
+		Engine engine = new Engine_BMW();
+		engine.start();
+		Car car = new Car("BMW", "Black", 200, engine);
+
 	}
 
 	private static void ArrayList() {
@@ -44,7 +49,7 @@ public class MainApp {
 		System.out.println(lst); // [alpha88, beta88, charlie88]
 	}
 
-	public static void ArrayToArrayList() {
+	private static void ArrayToArrayList() {
 		String[] strs = { "alpha", "beta", "charlie" };
 		System.out.println(Arrays.toString(strs)); // [alpha, beta, charlie]
 
@@ -62,7 +67,8 @@ public class MainApp {
 		System.out.println(lstInt); // [22, 44, 11, 33]
 	}
 
-	public static void SearchSortArrayList() {
+	private static void SearchSortArrayList() {
+
 		// Sort and search an "array" of Strings
 		String[] array = { "Hello", "hello", "Hi", "HI" };
 
@@ -89,4 +95,19 @@ public class MainApp {
 		System.out.println(Collections.binarySearch(lst, 35)); // -4 (insertion
 																// at index 3)
 	}
+
+	//private static void ArrayListCustomObject() {
+//		List<Car> cars = new ArrayList<Car>();
+//		cars.add(new Car("Skoda Fabia", "Green", 120000));
+//		cars.add(new Car("Bugatti", "Red", 1200000000));
+//		cars.add(new Car("Volkswagen", "Grey", 50000));
+//		for (Car car : cars) {
+//			car.Show();
+//		}
+//		Collections.sort(cars, new SortbyPrice());
+//		for (Car car : cars) {
+//			car.Show();
+//		}
+
+//	}
 }
